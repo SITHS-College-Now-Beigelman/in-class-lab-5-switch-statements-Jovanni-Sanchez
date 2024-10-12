@@ -19,8 +19,7 @@ int main()
 
     srand(time(0));
 
-    cout << "The robot will take these steps:\n"
-         << "\n";
+    cout << "The robot will take these steps:\n\n";
 
     for (currentRobotStep = 0; currentRobotStep < 25; currentRobotStep++)
     {
@@ -30,19 +29,19 @@ int main()
         {
         case 1:
             cout << "North.\n";
-            numOfStepsNorth += 1;
+            numOfStepsNorth++;
             break;
         case 2:
             cout << "South.\n";
-            numOfStepsSouth += 1;
+            numOfStepsSouth++;
             break;
         case 3:
             cout << "East.\n";
-            numOfStepsEast += 1;
+            numOfStepsEast++;
             break;
         case 4:
             cout << "West.\n";
-            numOfStepsWest += 1;
+            numOfStepsWest++;
             break;
         }
     }
