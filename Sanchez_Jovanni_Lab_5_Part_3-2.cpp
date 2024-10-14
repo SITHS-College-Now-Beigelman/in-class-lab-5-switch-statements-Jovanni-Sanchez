@@ -48,7 +48,7 @@ int main()
     {
         bool roaming = true;
         int tmpTotalSteps = 0;
-        int cuttingOffPoint = 600; // sorry lil buddy
+        int cuttingOffPoint = 840; // sorry lil buddy
 
         /* Here I assign temporary variables only used within this for and while loop.
         The bool roaming is used to determine wheter the robot has reached it's destination
@@ -68,27 +68,25 @@ int main()
             east zero. This ensures the robot truely makes it's way to it's destination after
             2 steps east and 3 steps north (in no particular order). */
 
+            tmpTotalSteps += 1;
+
             switch (internalDirection)
             {
             case 1:
                 numOfStepsNorth += 1;
-                tmpTotalSteps += 1;
                 break;
             case 2:
                 // loser
                 numOfStepsEast = 0;
                 numOfStepsNorth = 0;
-                tmpTotalSteps += 1;
                 break;
             case 3:
                 numOfStepsEast += 1;
-                tmpTotalSteps += 1;
                 break;
             case 4:
                 // get bent
                 numOfStepsEast = 0;
                 numOfStepsNorth = 0;
-                tmpTotalSteps += 1;
                 break;
             }
 
@@ -103,14 +101,12 @@ int main()
                 everyPossibleStep[currentLoop] = tmpTotalSteps;
                 cout << "The robot has reached it's destination after " << tmpTotalSteps << " steps.\n";
             }
-            /*
             else if (tmpTotalSteps >= cuttingOffPoint)
             {
                 roaming = false;
                 everyPossibleStep[currentLoop] = cuttingOffPoint;
                 cout << "The robot has reached it's destination after " << cuttingOffPoint << " steps.\n";
             }
-            */
             else
             {
                 roaming = true;
