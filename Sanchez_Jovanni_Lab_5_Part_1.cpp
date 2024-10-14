@@ -7,6 +7,10 @@
 #include <iostream>
 using namespace std;
 
+/* Calculating calories burned during Exercise */
+/* Total Calories Burned =
+(Duration in minutes) × (MET × 3.5 × Weight in kg) / 200 */
+
 int main()
 {
     // Setting up Variables
@@ -16,7 +20,7 @@ int main()
     double durationInMinutes; // The duration of the exercise (in min)
 
     cout << "What exercise do you want to do?: ";
-    cin >> exerciseName; // Very Important B)
+    cin >> exerciseName; // Very Important :D
 
     cout << "Please input your weight (in kilograms): ";
     cin >> userWeight; // The weight will be reused later for finding duration
@@ -38,14 +42,17 @@ int main()
     }
     else
     {
+        cout << "I'm sorry, I don't know the MET "
+             << "or Metabolic Equivalent of Task for "
+             << exerciseName << ".\nI'm defaulting the MET to 1.0.\n";
         MET = 1.0; // I'm too lazy to do more exercises
     }
 
-    cout << "The MET for " << exerciseName << " is " << MET << ".\n";
+    cout << "\nThe MET for " << exerciseName << " is " << MET << ".\n";
 
     cout << "The total number of calories you will burn is "
-        << (durationInMinutes) * (MET * 3.5 * userWeight) / 200
-        << " Calories" << endl;
+         << (durationInMinutes) * (MET * 3.5 * userWeight) / 200
+         << " Calories" << endl;
 
     // Setting up Extra Credit Variables
     /* Duration in minutes =
@@ -54,11 +61,12 @@ int main()
     double desiredCalories; // The user's desired Calories
 
     cout << "\nHow many calories do you want to burn?: ";
-    cin >> desiredCalories;
+    cin >> desiredCalories; // Get desired calories
 
     cout << "To burn " << desiredCalories << " Calories, You will need to be:"
-        << fixed << showpoint << setprecision(1) // Fix decimals to only 1 point
-        << "\n" << exerciseName << " for " << (desiredCalories * 200) / (MET * 3.5 * userWeight) << " minutes";
-    
+         << fixed << showpoint << setprecision(1) // Fix decimals to only 1 point
+         << "\n"
+         << exerciseName << " for " << (desiredCalories * 200) / (MET * 3.5 * userWeight) << " minutes";
+
     return 0;
 }
