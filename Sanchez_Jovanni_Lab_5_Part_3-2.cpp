@@ -35,8 +35,8 @@ int main()
 
     cout << "The robot will now begin 10 loops.\n"
          << "In each loop the robot will roam aimlessly until:\n"
-         << "   It has consecutively made 2 steps East and 3 steps North.\n"
-         << "   Or it dies :c\n\n";
+         << "   - It has consecutively made 2 steps East and 3 steps North.\n"
+         << "   - Or it dies :c\n\n";
 
     /* I hate using arrays, it's awesome. Arrays are a necessary evil in this instance
     (at least i think they are...) I not only have to make the code run until the robot
