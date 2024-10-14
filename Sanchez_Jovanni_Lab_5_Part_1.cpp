@@ -20,7 +20,7 @@ int main()
     double durationInMinutes; // The duration of the exercise (in min)
 
     cout << "What exercise do you want to do?: ";
-    cin >> exerciseName; // Very Important :D
+    getline(cin, exerciseName); // so stupid why
 
     cout << "Please input your weight (in kilograms): ";
     cin >> userWeight; // The weight will be reused later for finding duration
