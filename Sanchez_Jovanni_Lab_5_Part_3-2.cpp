@@ -41,8 +41,10 @@ int main()
     /* I hate using arrays, it's awesome. Arrays are a necessary evil in this instance
     (at least i think they are...) I not only have to make the code run until the robot
     consecutively makes 2 steps east and 3 steps north (in no particular order), but also
-    make the robot do it TEN TIMES and get an average out of it. So I used the help off a array
-    (boo!) to store the total after each loop to use them later to find a sum and a average.  */
+    make the robot do it TEN TIMES and get an average out of it. So I used the help of an array
+    (grr >:c) to store the total after each loop to use them later to find a sum and a average. I
+    was thinking to use a regular variable but I am either to far gone or stupid to actually find out
+    how to use it. */
 
     for (currentLoop = 0; currentLoop < 10; currentLoop++)
     {
