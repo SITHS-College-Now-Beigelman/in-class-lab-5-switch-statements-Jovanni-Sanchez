@@ -40,7 +40,7 @@ int main()
     {
         bool roaming = true;
         int tmpTotalSteps = 0;
-        int cuttingOffPoint = 900; // sorry lil buddy
+        int cuttingOffPoint = 1000; // sorry lil buddy
 
         /* Here I assign temporary variables only used within this for and while loop.
         The bool roaming is used to determine wheter the robot has reached it's destination
@@ -96,7 +96,7 @@ int main()
             else if (tmpTotalSteps >= cuttingOffPoint)
             {
                 roaming = false;
-                sumOfEveryStepTaken = sumOfEveryStepTaken + tmpTotalSteps;
+                sumOfEveryStepTaken = sumOfEveryStepTaken + cuttingOffPoint;
                 cout << "The robot has reached it's destination after " << cuttingOffPoint << " steps.\n";
             }
             else
